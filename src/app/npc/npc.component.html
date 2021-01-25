@@ -1,0 +1,71 @@
+<div class="row">
+
+    <div class="col-sm-5">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-center" style="height: 100px;">
+                    <img src="assets/img/terriermon.gif">
+                </div>
+                <h5 class="card-title">Terriermon</h5>
+
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-danger" style="width:{{lifeA}}%">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width:{{staminaA}}%">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-2 text-center">
+        <img src="assets/img/vs.jpg" width="100%">
+        <br>
+        <button (click)="atack()" class="btn btn-danger btn-sm" [disabled]="desabilitaBotao">
+            <i class="fa fa-angle-double-right"></i> Atacar
+        </button>
+    </div>
+
+    <div class="col-sm-5">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-center" style="height: 100px;">
+                    <img src="assets/img/tentomon.gif">
+                </div>
+                <h5 class="card-title">Tentomon</h5>
+
+
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-danger" style="width:{{lifeB}}%">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width:{{staminaB}}%">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 text-center mt-2">
+        <div class="alert alert-secondary alert-dismissible fade show" *ngIf="exibeSegundos">
+            <strong>Aguarde: </strong> {{timeLeft}} segundos!
+        </div>
+    </div>
+
+    <div class="col-sm-12 mt-2">
+        <h3>Histórico de Combate: </h3>
+        <ol></ol>
+    </div>
+
+</div>
